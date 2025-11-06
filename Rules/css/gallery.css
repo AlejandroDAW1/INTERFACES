@@ -1,0 +1,82 @@
+@layer gallery;
+@property --is-featured {
+  syntax: "<Integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --textColor: black;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense;
+
+  .item-wide {
+    grid-column: span 2;
+  }
+  .item-tall {
+    grid-row: span 2;
+  }
+  .gallery-item {
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 5px 20px rgb(0, 0, 0);
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+@supports (color: if(style(--textColor: white): black;
+else: pink)) {
+  footer::after {
+    content: "Este navegador soporta el if en CSS";
+    color: white;
+  }
+  .gallery-item {
+    --is-featured: 0;
+  }
+  .item-featured {
+    --is-featured: 1;
+  }
+  .gallery-item {
+    border: if(style(--is-featured: 1): 2px solid yellow; else: 2px solid grey;);
+    transform: if(style(--is-featured: 1): scale(1.03) ; else: scale(1) ;);
+  }
+}
+
+@supports not(color: if(style(--textColor: white): black;
+else: pink)) {
+  footer::after {
+    content: "Este navegador no soporta el if en CSS";
+    color: white;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+
+    .item-tall {
+      aspect-ratio: 16 / 10;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "plugins": [
+        "stylelint-use-nesting"
+    ],
+    "extends": [
+        "stylelint-config-standard"
+    ],
+    "rules": {
+        "declaration-property-unit-allowed-list": {
+            "/(^border)/": [
+                "px",
+                "%",
+                "rem",
+                "em"
+            ],
+            "/^font-size|^padding|^gap|^margin/": [
+                "rem",
+                "em"
+            ]
+        },
+        "unit-allowed-list": [
+            "%",
+            "vw",
+            "px",
+            "rem",
+            "vh",
+            "fr",
+            "em",
+            "s",
+            "px",
+            "deg"
+        ],
+        "max-nesting-depth": 4,
+        "csstools/use-nesting": "always"
+    }
+}

@@ -1,0 +1,28 @@
+@layer base;
+:root{
+    --color-titulos: blue;
+    --fuente-principal: Arial, sans-serif;
+    --borde: 0.5rem;
+    --sombra: 0px 2px 10px rgb(0, 0, 0);
+    --duracion-animacion: 0.5s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+
+  & :is(h1,h2,h3){
+    color: var(--color-titulos);
+  }
+
+  & :where(header, footer, main, aside){
+    padding: 1rem;
+  }
+}

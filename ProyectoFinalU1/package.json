@@ -1,0 +1,21 @@
+{
+  "name": "proyectofinalu1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-use-nesting": "^6.0.0",
+    "vite": "npm:rolldown-vite@7.2.2",
+    "vite-plugin-stylelint": "^6.0.2"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.2.2"
+  }
+}

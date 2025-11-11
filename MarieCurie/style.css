@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #b7b6b4;
+}
+header{
+    background-color: #897933;
+    padding: 20px;
+    text-align: center;
+    color: #f6f2f2;
+    font-family: 'Alan Sans', sans-serif;
+}
+header h1{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 4px #000000;
+    text-transform: uppercase;
+}
+header h1 ~ p{
+    font-size: 15px;
+    margin-top: 5px;
+    font-style: italic;
+    color: #b3b1b1;
+}
+nav {
+    background-color: #6b5c34;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav > ul > li > a{
+    text-decoration: none;
+    color: #f6f2f2;
+}
+main {
+    padding: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+main article h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #837c49;   
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 1px #080808; 
+    letter-spacing: 1px;
+}
+main article p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333333;
+    font-family: 'Alan Sans', sans-serif;
+    word-spacing: 2px;
+}
+main article p span{
+    font-weight: 750;
+    color: #bd1b1b;
+}
+main article section h2 + p{
+    text-indent: 50px;
+    font-weight: 550;
+}
+main article h3{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #837c49;    
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 1px #000000; 
+    letter-spacing: 1px;
+}
+#overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #c4c3c1;
+}
+aside {
+    background-color: #b7b6b4;
+    padding: 20px;
+    font-family: 'Alan Sans', sans-serif;
+    border-left: rgb(166, 166, 250) 5px solid;
+    margin-bottom: 50px;
+    margin-left: 150px;
+}
+aside h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #837c49;
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-variant: small-caps;
+    text-shadow: 1px 1px 1px #444127;
+    letter-spacing: 1px;
+}
+aside ul{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 7px;
+}
+aside ul li{
+    font-family: 'Alan Sans', sans-serif;
+}
+footer {
+    background-color: #897933;
+    color: #f6f2f2;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Alan Sans', sans-serif;
+    width: 100%;
+    margin-top: 50px;
+}

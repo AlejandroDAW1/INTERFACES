@@ -1,0 +1,40 @@
+.contenedor {
+  width: 350px; /* Ancho de referencia */
+  border: 2px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.caja {
+  /* Intentamos que ambas tengan 100px de ancho y alto */
+  width: 100px; 
+  height: 100px;
+  
+  /* Ambas tienen el mismo relleno y borde */
+  padding: 10px;        /* 10px a cada lado (izq/der) = +20px al ancho */
+  border: 5px solid red; /* 5px a cada lado (izq/der) = +10px al ancho */
+  
+  /* Estilos de presentación */
+  margin: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  line-height: 100px;
+  font-size: 14px;
+}
+
+/* Diferencia Clave: box-sizing */
+
+/* 1. content-box (Valor predeterminado) */
+.caja-content-box {
+  box-sizing: content-box; 
+  background-color: #d1e7dd; /* Verde claro */
+}
+
+/* 2. border-box (Valor preferido) */
+.caja-border-box {
+  box-sizing: border-box; 
+  background-color: #f8d7da; /* Rojo claro */
+}

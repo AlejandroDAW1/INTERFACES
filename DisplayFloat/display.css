@@ -1,0 +1,47 @@
+body {
+    font-family: 'Creepster';
+    background-color:  #2f312e; 
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+h1, h2{
+    color: rgb(233, 87, 87);
+}
+.galeria.block{
+    border: 3px dashed yellow;
+    border-radius: 10px;
+    padding: 20px;
+}
+.galeria.inline{
+    border: 3px dashed yellow;
+    border-radius: 10px;
+    padding: 20px;
+}
+.galeria.inline-block{
+    border: 3px dashed yellow;
+    border-radius: 10px;
+}
+.tarjeta{
+    background-color: rgb(63, 63, 126);
+    margin: 5px;
+    width: 150px;
+    height: 80px;
+    border: 2px solid rgb(129, 12, 12);
+    border-radius: 10px;
+    align-content: center;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.block .tarjeta{
+    display: block;
+    
+}
+.inline .tarjeta{
+    display: inline;
+}
+.inline-block .tarjeta{
+    display: inline-block;
+}
+

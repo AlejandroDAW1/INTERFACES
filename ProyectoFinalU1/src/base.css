@@ -17,6 +17,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  background-color: rgb(222, 222, 222);
 
   & :is(h1,h2,h3){
     color: var(--color-titulos);

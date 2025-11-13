@@ -1,1 +1,46 @@
 @layer components;
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: 30px;
+
+  a {
+    color: blue;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  a:hover {
+    color: black;
+  }
+
+  .submenu {
+    display: block;
+    background-color: #ffffff;
+    position: absolute;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 1px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    transform-origin: top;
+    transform: scale(1, 0);
+    list-style: none;
+  }
+
+  .has-submenu:hover .submenu {
+    display: block;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    transform: scale(1, 1);
+
+    li:hover {
+      text-shadow: 1px 1px 0.5px black;
+    }
+  }
+}
+#menu-toggle {
+  display: none;
+}
+

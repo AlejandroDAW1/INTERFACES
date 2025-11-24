@@ -42,10 +42,8 @@ footer {
   width: 80%;
   gap: 5rem;
   margin: 0 auto;
-}
 
-@media (width > 900px) {
-  .page-container {
+  @media (width > 900px) {
     display: grid;
     grid-template-columns: 3fr 1fr;
   }
@@ -99,8 +97,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-q
-
 @container aside-container (max-width: 200px) {
   .sidebar {
     text-align: center;

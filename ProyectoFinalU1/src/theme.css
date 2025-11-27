@@ -1,17 +1,16 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: black;
-    --color-text: white;
-    --color-card-bg: #1b1b1b;
-    --color-card-border: #444;
-    --color-hover-bg: #333;
+    --color-fondo: black;
+    --color-texto: white;
+    --color-card-fondo: #1b1b1b;
+    --color-card-borde: #444;
     --color-link: #184fbe;
     --color-link-hover: white;
   }
 
   body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
   }
   header {
     background-color: black;
@@ -25,20 +24,20 @@
   }
 
   .card {
-    border-color: var(--color-card-bg);
+    border-color: var(--color-card-fondo);
   }
   .card-content {
-    background-color: var(--color-bg);
+    background-color: var(--color-fondo);
   }
   .submenu {
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-card-border);
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-card-borde);
   }
   .nav-links {
-    background-color: var(--color-bg);
+    background-color: var(--color-fondo);
   }
   .sidebar {
-    background-color: var(--color-card-bg);
+    background-color: var(--color-card-fondo);
   }
 }
 

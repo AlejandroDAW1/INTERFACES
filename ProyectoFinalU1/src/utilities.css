@@ -16,7 +16,7 @@
 
   & * {
     opacity: 0;
-    animation: fade-in 0.5s ease-out forwards;
+    animation: fade-in var(--duracion-animacion) ease-out forwards;
 
     &:nth-child(1) {
       animation-delay: 0.1s;
@@ -37,7 +37,7 @@
   
   img {
     filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition: filter var(--duracion-transicion) ease, transform var(--duracion-transicion) ease;
 
     &:hover {
       filter: grayscale(0);

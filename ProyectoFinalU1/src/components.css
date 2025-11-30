@@ -7,7 +7,7 @@
   a {
     color: blue;
     text-decoration: none;
-    transition: 0.3s;
+    transition: var(--duracion-transicion);
 
     &:hover {
       color: black;
@@ -27,8 +27,8 @@
     border-radius: 5px;
     list-style: none;
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity var(--duracion-transicion) ease,
+      transform var(--duracion-transicion) ease;
     z-index: 50;
 
     li {
@@ -48,7 +48,8 @@
       display: block;
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition: opacity var(--duracion-transicion) ease,
+        transform var(--duracion-transicion) ease;
     }
   }
 }
@@ -67,7 +68,7 @@
   cursor: pointer;
   background-color: rgb(255 255 255 / 15%);
   border-radius: 6px;
-  transition: all 0.35s ease-in-out;
+  transition: all var(--duracion-transicion) ease-in-out;
 
   span {
     display: block;
@@ -75,7 +76,7 @@
     width: 100%;
     background-color: #2023e7;
     border-radius: 3px;
-    transition: all 0.35s ease-in-out;
+    transition: all var(--duracion-transicion) ease-in-out;
   }
 }
 
@@ -88,7 +89,9 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 1px 1px 10px black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  transition: transform var(--duracion-transicion) ease,
+    box-shadow var(--duracion-transicion) ease,
+    height var(--duracion-transicion) ease;
   height: 171px;
   position: relative;
   interpolate-size: allow-keywords;
@@ -111,8 +114,9 @@
       text-decoration: none;
       background-color: rgb(41 104 214);
       color: white;
-      transition: background-color 0.3s ease, color 0.3s ease,
-        transform 0.25s ease;
+      transition: background-color var(--duracion-transicion) ease,
+        color var(--duracion-transicion) ease,
+        transform var(--duracion-transicion) ease;
 
       &:hover {
         background-color: rgb(8 65 163);
@@ -124,7 +128,7 @@
       border-top: 3px solid black;
       padding-top: 1.2rem;
     }
-    
+
     .card:hover & {
       display: block;
 
@@ -200,14 +204,7 @@
     .submenu {
       display: block;
       position: relative;
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
-      padding: 0.625rem;
-      border-radius: 5px;
-      list-style: none;
       opacity: 1;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      z-index: 50;
 
       li {
         a {

@@ -21,8 +21,8 @@
   .submenu {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
     padding: 10px;
     border-radius: 5px;
     list-style: none;
@@ -30,6 +30,7 @@
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 50;
+
     li {
       a {
         font-size: 16px;
@@ -42,12 +43,13 @@
         }
       }
     }
-  }
-  &:hover .submenu {
+
+  &:hover & {
     display: block;
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.3s ease, transform 0.3s ease;
+  }
   }
 }
 
@@ -63,7 +65,7 @@
   width: 32px;
   padding: 8px;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgb(255 255 255 / 15%);
   border-radius: 6px;
   transition: all 0.35s ease-in-out;
 
@@ -107,13 +109,13 @@
       display: inline-block;
       border-radius: 0.2rem;
       text-decoration: none;
-      background-color: rgb(41, 104, 214);
+      background-color: rgb(41 104 214);
       color: white;
       transition: background-color 0.3s ease, color 0.3s ease,
         transform 0.25s ease;
 
       &:hover {
-        background-color: rgb(8, 65, 163);
+        background-color: rgb(8 65 163);
         transform: translateY(-3px);
       }
     }
@@ -121,7 +123,7 @@
 
   &:hover {
     transform: translateY(-8px) scale(1.01);
-    box-shadow: 0px 10px 30px black;
+    box-shadow: 0 10px 30px black;
     height: auto;
 
     .card-content {
@@ -152,7 +154,8 @@
     height: 350px;
   }
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .header-content {
     text-align: center;
   }
@@ -163,16 +166,16 @@
     right: -100%;
     width: 250px;
     height: 100vh;
-    background-color: #ffffff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgb(0 0 0 / 25%);
     padding-top: 80px;
     flex-direction: column;
     transition: right 0.4s ease-in-out;
     z-index: 900;
-  }
 
-  #menu-toggle:checked ~ .nav-links {
+  #menu-toggle:checked ~ & {
     right: 0;
+  }
   }
 
   .hamburger-menu {
@@ -186,9 +189,11 @@
   #menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   #menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
     opacity: 0;
   }
+
   #menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
   }
@@ -199,14 +204,15 @@
   .submenu {
     display: block;
     position: relative;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
     padding: 10px;
     border-radius: 5px;
     list-style: none;
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 50;
+
     li {
       a {
         font-size: 16px;

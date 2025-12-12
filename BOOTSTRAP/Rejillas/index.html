@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rejillas CSS</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary navbar-expand-md">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./rejillas1.html">
+          <img src="./bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Bootstrap
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Ejercicio 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./rejillas2.html">Ejercicio 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./rejillas3.html">Ejercicio 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Inserta aquí tu código -->
+
+<div class="container-fluid">
+    <div class="row me-2 mb-2">
+        <div class="col-12 ms-2 bg-success text-white h-50px">
+            Alto 50px
+        </div>
+    </div>
+
+    <div class="row ms-2 mb-2 me-0">
+        <div class="col-12 col-sm-10 col-md-10 col-lg-10 p-0">
+
+            <div class="row mb-2 me-2">
+                <div class="col-12 bg-info text-white h-70px">
+                    Alto 70px
+                </div>
+            </div>
+
+            <div class="row mb-2 me-2">
+                <div class="col-12 col-sm-6 bg-secondary text-white h-150px">
+                    Alto 150px
+                </div>
+                <div class="col-12 col-sm-6 bg-warning text-white h-150px">
+                    Alto 150px
+                </div>
+            </div>
+
+            <div class="row mb-2 me-2">
+                <div class="col-6 col-sm-4 col-md-2 bg-primary text-white h-50px">
+                    Alto 50px
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 bg-success text-white h-50px">
+                    Alto 50px
+                </div>
+                <div class="col-6 col-sm-4 col-md-4 bg-warning text-white h-50px">
+                    Alto 50px
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 bg-dark text-white h-50px">
+                    Alto 50px
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 bg-info text-white h-50px">
+                    Alto 50px
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 bg-danger text-white h-550px d-none d-sm-block">
+            Alto 550px
+        </div>
+      </div>
+    <div class="row mb-2 me-0">
+        <div class="ms-2 col-12 bg-primary text-white h-50px">
+            Alto 50px
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

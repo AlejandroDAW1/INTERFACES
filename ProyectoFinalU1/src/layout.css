@@ -3,6 +3,7 @@ main {
   container-name: main-container;
   padding: 1.5rem;
 }
+
 aside {
   container-type: inline-size;
   container-name: aside-container;
@@ -11,8 +12,8 @@ aside {
 header {
   display: flex;
   justify-content: center;
-  background-color: rgb(236, 235, 235);
-  box-shadow: 1px 1px 3px rgb(155, 155, 155);
+  background-color: rgb(236 235 235);
+  box-shadow: 1px 1px 3px rgb(155 155 155);
 
   .header-content {
     display: flex;
@@ -54,6 +55,7 @@ footer {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
+
 .sidebar {
   margin-top: 1.25rem;
   background-color: white;
@@ -81,7 +83,7 @@ footer {
     transition: 0.3s;
 
     &:hover {
-      color: rgb(89, 88, 88);
+      color: rgb(89 88 88);
       font-size: large;
     }
   }
@@ -92,11 +94,13 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @container main-container (min-width: 800px) {
   .card-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @container aside-container (max-width: 200px) {
   .sidebar {
     text-align: center;

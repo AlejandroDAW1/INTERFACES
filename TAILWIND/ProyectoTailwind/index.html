@@ -16,8 +16,11 @@
       <div class="flex items-center">
         <input type="checkbox" id="menu-toggle" class="hidden peer" />
         <label for="menu-toggle" class="cursor-pointer md:hidden block text-2xl">☰</label>
-        <ul
-          class="hidden md:flex md:gap-6 flex-col md:flex-row absolute md:static top-12 right-6 md:w-auto bg-white dark:bg-slate-800 md:bg-transparent md:p-0 shadow-lg md:shadow-none peer-checked:flex rounded-lg">
+        <ul class="flex md:flex md:gap-6 flex-col md:flex-row absolute md:static top-12 right-6 md:w-auto bg-white dark:bg-slate-800 md:bg-transparent md:p-0 shadow-lg md:shadow-none rounded-lg
+          transition-all duration-500 ease-in-out
+          max-h-0 invisible overflow-hidden
+          peer-checked:max-h-96 peer-checked:visible
+          md:max-h-full md:visible md:overflow-visible">
           <li
             class="not-first:border-t md:text-center not-first:border-gray-300 md:p-5 p-3 pr-15 md:not-first:border-t-0 hover:bg-blue-500 hover:text-white duration-300 rounded-t-lg md:rounded-lg">
             <a href="#" class="">Inicio</a>
@@ -38,8 +41,8 @@
       </div>
     </nav>
   </header>
-  <main class="flex flex-col-reverse lg:flex-row mx-20 gap-10 p-5 mt-10">
-    <aside class="lg:w-1/4">
+  <main class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 mx-10">
+    <aside class="lg:order-1 order-2 col-span-4 md:col-span-3 lg:col-span-1 mb-4 w-full">
       <section class="bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl">
         <h3 class="text-2xl font-bold text-blue-500 mb-5 pb-2 border-b-2 border-blue-500 w-full">Login</h3>
         <form class="flex flex-col gap-5 max-w-sm mx-auto mt-5">
@@ -91,67 +94,110 @@
       </section>
     </aside>
 
-    <section class="grid gap-8 lg:w-3/4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
-      <article class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 border-green-500">
-        <img src="/pixel10.jpg" alt="Pixel 10" class="w-full h-50 aspect-video object-cover rounded-2xl">
-        <h3 class="text-4xl font-bold text-green-500 mt-1">Pixel 10</h3>
+    <section
+      class="grid gap-8 lg:order-3 order-1 lg:col-span-3 md:col-span-2 col-span-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] mb-10 lg:mx-10">
+      <article
+        class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 h-max border-green-500 hover:border-purple-500 hover:-translate-y-1.5 duration-300">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/pixel10.jpg" alt="Pixel 10"
+            class="w-full h-50 aspect-video object-cover transition-transform duration-700 group-hover:scale-125 group-hover:rotate-3">
+        </div>
+        <h3
+          class="text-4xl font-bold text-green-500 mt-1 group-hover:text-purple-500 group-hover:skew-x-[-10deg] transition-all duration-600">
+          Pixel 10</h3>
         <div>
-          <p class="h-0 overflow-hidden group-hover:h-auto group-hover:transition-all duration-300 my-4">El último buque
+          <p class="h-0 overflow-hidden group-hover:h-auto transition-all duration-600 my-4">El último buque
             insignia de Samsung con IA avanzada y cámara de 200MP. Increíblemente potente.</p>
         </div>
-        <footer class="text-end bg-slate-700 text-white p-2 rounded-lg">Desde 1.099 €</footer>
+        <footer class="text-end dark:bg-slate-700 dark:text-white bg-slate-200 text-black p-2 rounded-lg">Desde 1.099 €
+        </footer>
       </article>
 
-      <article class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 border-red-500">
-        <img src="/iphone17pro.jpg" alt="iPhone 17 Pro" class="w-full h-50 aspect-video object-cover rounded-2xl">
-        <h3 class="text-4xl font-bold text-red-500 mt-1">iPhone 17 Pro</h3>
+      <article
+        class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 h-max border-red-500 hover:border-purple-500 hover:-translate-y-1.5 duration-300">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/iphone17pro.jpg" alt="iPhone 17 Pro"
+            class="w-full h-50 aspect-video object-cover rounded-2xl transition-transform duration-700 group-hover:scale-125 group-hover:rotate-3">
+        </div>
+        <h3
+          class="text-4xl font-bold text-red-500 mt-1 group-hover:text-purple-500 group-hover:skew-x-[-10deg] transition-all duration-600">
+          iPhone 17 Pro</h3>
         <div>
-          <p class="h-0 overflow-hidden group-hover:h-auto group-hover:transition-all duration-300 my-4">La máxima
+          <p class="h-0 overflow-hidden group-hover:h-auto transition-all duration-600 my-4">La máxima
             expresión de Apple con chip A17 Pro y teleobjetivo de 5x. Diseño de titanio ligero.</p>
         </div>
-        <footer class="text-end bg-slate-700 text-white p-2 rounded-lg">Desde 1.319 €</footer>
+        <footer class="text-end dark:bg-slate-700 dark:text-white bg-slate-200 text-black p-2 rounded-lg">Desde 1.319 €
+        </footer>
       </article>
 
-      <article class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 border-green-500">
-        <img src="/pixel9a.jpg" alt="Google Pixel 9 a" class="w-full h-50 aspect-video object-cover rounded-2xl">
-        <h3 class="text-4xl font-bold text-green-500 mt-1">Pixel 9a</h3>
+      <article
+        class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 h-max border-green-500 hover:border-purple-500 hover:-translate-y-1.5 duration-300">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/pixel9a.jpg" alt="Google Pixel 9 a"
+            class="w-full h-50 aspect-video object-cover rounded-2xl transition-transform duration-700 group-hover:scale-125 group-hover:rotate-3">
+        </div>
+        <h3
+          class="text-4xl font-bold text-green-500 mt-1 group-hover:text-purple-500 group-hover:skew-x-[-10deg] transition-all duration-600">
+          Pixel 9a</h3>
         <div>
-          <p class="h-0 overflow-hidden group-hover:h-auto group-hover:transition-all duration-300 my-4">La apuesta de
+          <p class="h-0 overflow-hidden group-hover:h-auto transition-all duration-600 my-4">La apuesta de
             Google por la fotografía computacional y la inteligencia artificial integrada en el móvil.
           </p>
         </div>
-        <footer class="text-end bg-slate-700 text-white p-2 rounded-lg">Desde 549 €</footer>
+        <footer class="text-end dark:bg-slate-700 dark:text-white bg-slate-200 text-black p-2 rounded-lg">Desde 549 €
+        </footer>
       </article>
 
-      <article class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 border-orange-500">
-        <img src="/xiaomi15t.png" alt="Xiaomi 15 T" class="w-full h-50 aspect-video object-cover rounded-2xl">
-        <h3 class="text-4xl font-bold text-orange-500 mt-1">Xiaomi 15T</h3>
+      <article
+        class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 h-max border-orange-500 hover:border-purple-500 hover:-translate-y-1.5 duration-300">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/xiaomi15t.png" alt="Xiaomi 15 T"
+            class="w-full h-50 aspect-video object-cover rounded-2xl transition-transform duration-700 group-hover:scale-125 group-hover:rotate-3">
+        </div>
+        <h3
+          class="text-4xl font-bold text-orange-500 mt-1 group-hover:text-purple-500 group-hover:skew-x-[-10deg] transition-all duration-600">
+          Xiaomi 15T</h3>
         <div>
-          <p class="h-0 overflow-hidden group-hover:h-auto group-hover:transition-all duration-300 my-4">Con un enfoque
+          <p class="h-0 overflow-hidden group-hover:h-auto transition-all duration-600 my-4">Con un enfoque
             en la fotografía, este móvil ofrece lentes Leica y una experiencia de cámara profesional.
           </p>
         </div>
-        <footer class="text-end bg-slate-700 text-white p-2 rounded-lg">Desde 499.99€</footer>
+        <footer class="text-end dark:bg-slate-700 dark:text-white bg-slate-200 text-black p-2 rounded-lg">Desde 499.99€
+        </footer>
       </article>
 
-      <article class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 border-green-500">
-        <img src="/pixel9pro.jpg" alt="Pixel 9 Pro" class="w-full h-50 aspect-video object-cover rounded-2xl">
-        <h3 class="text-4xl font-bold text-green-500 mt-1">Pixel 9 Pro</h3>
+      <article
+        class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 h-max border-green-500 hover:border-purple-500 hover:-translate-y-1.5 duration-300">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/pixel9pro.jpg" alt="Pixel 9 Pro"
+            class="w-full h-50 aspect-video object-cover rounded-2xl transition-transform duration-700 group-hover:scale-125 group-hover:rotate-3">
+        </div>
+        <h3
+          class="text-4xl font-bold text-green-500 mt-1 group-hover:text-purple-500 group-hover:skew-x-[-10deg] transition-all duration-600">
+          Pixel 9 Pro</h3>
         <div>
-          <p class="h-0 overflow-hidden group-hover:h-auto group-hover:transition-all duration-300 my-4">Rendimiento
+          <p class="h-0 overflow-hidden group-hover:h-auto transition-all duration-600 my-4">Rendimiento
             extremo y carga ultrarrápida, ideal para gaming y usuarios exigentes.</p>
         </div>
-        <footer class="text-end bg-slate-700 text-white p-2 rounded-lg">Desde 999 €</footer>
+        <footer class="text-end dark:bg-slate-700 dark:text-white bg-slate-200 text-black p-2 rounded-lg">Desde 999 €
+        </footer>
       </article>
 
-      <article class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 border-blue-300">
-        <img src="/pocof8.jpeg" alt="Poco F8 Ultra" class="w-full h-50 aspect-video object-cover rounded-2xl">
-        <h3 class="text-4xl font-bold text-blue-300 mt-1">Poco F8 Ultra</h3>
+      <article
+        class="group bg-white p-5 dark:bg-slate-800 shadow-xl rounded-xl border-l-4 h-max border-blue-300 hover:border-purple-500 hover:-translate-y-1.5 duration-300">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="/pocof8.jpeg" alt="Poco F8 Ultra"
+            class="w-full h-50 aspect-video object-cover rounded-2xl transition-transform duration-700 group-hover:scale-125 group-hover:rotate-3">
+        </div>
+        <h3
+          class="text-4xl font-bold text-blue-300 mt-1 group-hover:text-purple-500 group-hover:skew-x-[-10deg] transition-all duration-600">
+          Poco F8 Ultra</h3>
         <div>
-          <p class="h-0 overflow-hidden group-hover:h-auto group-hover:transition-all duration-300 my-4">Innovador
+          <p class="h-0 overflow-hidden group-hover:h-auto transition-all duration-600 my-4">Innovador
             sistema de cámara Hasselblad y un diseño curvo distintivo. Un placer para la vista.</p>
         </div>
-        <footer class="text-end bg-slate-700 text-white p-2 rounded-lg">Desde 829,99 €</footer>
+        <footer class="text-end dark:bg-slate-700 dark:text-white bg-slate-200 text-black p-2 rounded-lg">Desde 829,99 €
+        </footer>
       </article>
     </section>
   </main>
